@@ -1,0 +1,123 @@
+/* style.module.css */
+
+.main {
+    position: relative;
+    top: 70px;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: white;
+    box-shadow: 1px 1px 1px 1px #ebebeb;
+    padding: 20px;
+    position: fixed;
+    height: 100%;
+}
+
+.sidebarLink {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.sidebarLink:hover {
+    background-color: #3674f9;
+    color: white;
+}
+
+.activeLink {
+    display: block;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #3674f9;
+    color: white;
+}
+
+.cards {
+    flex: 1;
+    padding: 10px 20px; /* Изменено на 10px сверху и снизу, 20px слева и справа */
+    margin-left: 220px; /* Учитывает ширину бокового бара и добавляет отступ для основного контента */
+}
+
+.card {
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 1px 1px #ebebeb;
+    margin-left: 10px;
+}
+
+.content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a {
+    color: #3674f9;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    font-weight: bold;
+}
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.icon {
+    color: #a2a2a2;
+    padding-left: 12px;
+}
+
+.icon:hover {
+    color: #3674f9;
+}
+
+.salary {
+    padding-bottom: 20px;
+    color: #3495db;
+    font-weight: 700;
+}
+
+.description {
+    padding-bottom: 20px;
+}
+
+.company {
+    padding-bottom: 20px;
+    font-weight: bold;
+    color: #4b4b4b;
+}
+
+.button {
+    background: #3674f9;
+    padding: 12px 32px;
+    margin-right: 20px;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    border: none;
+}
+
+.button:hover {
+    background: #2975ac;
+}

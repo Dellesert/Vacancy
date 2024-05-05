@@ -1,0 +1,34 @@
+.sidebar {
+    width: 200px;
+    background-color: white;
+    padding: 20px;
+    position: fixed;
+    height: 100%;
+    z-index: 99999;
+}
+
+.sidebarLink {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.sidebarLink:hover {
+    background-color: #3674f9;
+    color: white;
+}
+
+.activeLink {
+    display: block;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #3674f9;
+    color: white;
+}

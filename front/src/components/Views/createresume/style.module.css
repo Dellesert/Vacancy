@@ -1,0 +1,80 @@
+.main {
+  position: relative;
+  display: flex;
+  top: 50px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards {
+  padding: 10px 20px;
+  width: 50%;
+}
+
+.card {
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 1px 1px 1px 1px #ebebeb;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  padding: 25px;
+  }
+
+a {
+  color: #3674f9
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  font-weight: bold;
+}
+
+.icon {
+  color: #a2a2a2;
+}
+
+.icon:hover {
+  color: #3674f9;
+}
+
+.salary {
+  padding-bottom: 20px;
+  color: #3495db;
+  font-weight: 700;
+}
+
+.description {
+  padding-bottom: 20px;
+}
+
+.company {
+  padding-bottom: 20px;
+  font-weight: bold;
+  color: #4b4b4b;
+}
+
+.button {
+  background: #3674f9;
+  width: 250px;
+  padding: 12px 32px;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  border: none;
+  margin: 0 auto;
+}
+
+.button:hover {
+  background: #2975ac;
+}

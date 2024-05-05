@@ -1,0 +1,54 @@
+version: '3.8'
+
+services:
+  db:
+    container_name: postgres
+    image: postgres:14.0-alpine
+    restart: always
+    environment:
+      - POSTGRES_USER=${TYPEORM_USERNAME}
+      - POSTGRES_PASSWORD=${TYPEORM_PASSWORD}
+      - POSTGRESS_DB=${TYPEORM_DATABASE}
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+    ports:
+      - ${TYPEORM_PORT}:${TYPEORM_PORT}
+  back:
+    container_name: back
+    build: 
+      context: ./back
+    depends_on:
+      - db
+    restart: unless-stopped
+    ports:
+      - '${API_PORT}:${API_PORT}'
+    environment:
+      - API_PORT=${API_PORT}
+      - API_HOST=${API_HOST}
+      - TYPEORM_CONNECTION=${TYPEORM_CONNECTION}
+      - TYPEORM_USERNAME=${TYPEORM_USERNAME}
+      - TYPEORM_PASSWORD=${TYPEORM_PASSWORD}
+      - TYPEORM_DATABASE=${TYPEORM_DATABASE}
+      - TYPEORM_PORT=${TYPEORM_PORT}
+      - TYPEORM_HOST=db
+  front:
+    container_name: front-react
+    build:
+      context: ./front
+    depends_on:
+      - db
+      - back
+    restart: unless-stopped
+    ports: 
+      - '3000:3000'
+  nginx:
+    container_name: nginx
+    build:
+      context: ./nginx
+    restart: always
+    ports:
+      - '80:80'
+      - '80:80'
+    
+
+      

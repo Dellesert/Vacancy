@@ -1,0 +1,12 @@
+.select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #9abaff;
+  margin-bottom: 12px;
+  box-sizing: content-box;
+  font-weight: bold;
+  outline: 0;
+  appearance: none;
+
+}
